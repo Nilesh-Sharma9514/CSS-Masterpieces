@@ -43,6 +43,7 @@
             width:200px;
             background-color:wheat;
             z-index:2;
+            border:2px solid black;
             animation-name:rotate;
             animation-duration:0.1s;
             animation-iteration-count: infinite;
@@ -52,10 +53,16 @@
             width:90px;
             margin-top:200px;
             height:200px;
+            box-shadow:5px 5px black;
             background-color:purple;
             z-index:1;
             border-radius:10px;
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:end;
         }
+
 
         @keyframes rotate{
             from{
@@ -72,7 +79,11 @@
 </head>
 <body>
     <div id="container">
-       <div class="box" id="box1"><p>⚡</p></div>
+       <div class="box" id="box1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-diamond-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6.95.435c.58-.58 1.52-.58 2.1 0l6.515 6.516c.58.58.58 1.519 0 2.098L9.05 15.565c-.58.58-1.519.58-2.098 0L.435 9.05a1.48 1.48 0 0 1 0-2.098z"/>
+        </svg>
+       </div>
        <div class="box" id="box2"></div>
        <div class="box" id="box3"></div>
     </div>
