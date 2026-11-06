@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Loading</title>
+    <style>
+        .container{
+            display:flex;
+            width:100%;
+            background-color:#A50000;
+            height:97vh;
+            justify-content:center;
+            align-items:center;
+            gap:2px;
+        }
+
+        .bar{
+            width:5px;
+            height:50px;
+            background-color:white;
+            border:1px solid black;
+            border-radius:5px;
+            animation-name:music;
+            animation-timing-function:ease-in-out;
+            animation-duration:0.9s;
+            animation-iteration-count:infinite;
+            animation-direction:alternate;
+        }
+
+        #bar1{
+            animation-delay:0.4s;
+        }
+
+        #bar2{
+            animation-delay:0.5s;
+        }
+
+        #bar3{
+            animation-delay:0.6s;
+        }
+
+        #bar4{
+            animation-delay:0.5s;
+        }
+
+        #bar5{
+            animation-delay:0.7s;
+        }
+
+        #bar7{
+            animation-delay:0.4s;
+        }
+
+        @keyframes music{
+            0%{
+                transform:scaleY(1);
+            }
+
+            50%{
+                transform:scaleY(1.5);
+            }
+
+            100%{
+                transform:scaleY(0.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="bar" id="bar1"></div>
+        <div class="bar" id="bar2"></div>
+        <div class="bar" id="bar3"></div>
+        <div class="bar" id="bar4"></div>
+        <div class="bar" id="bar5"></div>
+        <div class="bar" id="bar6"></div>
+        <div class="bar" id="bar7"></div>
+    </div>
+</body>
+</html>
