@@ -17,26 +17,25 @@
 
        #card{
         width:200px;
+        border-right:10px solid yellow;
+        border-left:10px solid lightskyblue;
+        border-top:10px solid green;
+        border-bottom:10px solid white;
         height:300px;
         background-color:whitesmoke;
         border-radius:5px;
         box-shadow:5px 5px black;
-        transition:transform 2s; /* This Property makes the card apply same transform property
-        again while getting back(transitioning back) to its original state, which was used to transform it when hovered*/
-        background-image:url("./Pokemon.jpg");
         background-position:center;
         background-size:cover;
+        transition:transform 2s; /* This Property makes the card apply same transform property
+        again while getting back(transitioning back) to its original state, which was used to transform it when hovered*/
        }
 
        #card:hover{
          transition-duration: 2s;
          transform:rotateY(180deg);
          transition-timing-function:ease-in-out;
-         border-radius:5px;
-         background-image:url("./Misti.jpg");
-       }
-
-
+       }  
        
     </style>
 </head>
