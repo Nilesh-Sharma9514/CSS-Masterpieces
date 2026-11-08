@@ -6,42 +6,74 @@
     <title>Card Flipping</title>
     <style>
        #container{
-        display:flex;
-        background-color:#A50000;
         width:100%;
         height:97vh;
-        flex-direction:row;
-        justify-content:center;
-        align-items:center;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#A50000;
        }
 
-       #card{
-        width:200px;
-        border-right:10px solid yellow;
-        border-left:10px solid lightskyblue;
-        border-top:10px solid green;
-        border-bottom:10px solid white;
+       #card-frame{
+        width:210px;
         height:300px;
-        background-color:whitesmoke;
         border-radius:5px;
-        box-shadow:5px 5px black;
-        background-position:center;
-        background-size:cover;
-        transition:transform 2s; /* This Property makes the card apply same transform property
-        again while getting back(transitioning back) to its original state, which was used to transform it when hovered*/
+        position:relative;
+        background-color:#A50000;
+        border-radius:5px;
        }
 
-       #card:hover{
-         transition-duration: 2s;
+       #main-card{
+        border-radius:5px;
+        width:100%;
+        height:100%;
+        position:relative;
+        transform-style:preserve-3d;
+        transition:transform 1s;
+        will-change:transform;
+       }
+
+       #card-frame:hover #main-card{
          transform:rotateY(180deg);
-         transition-timing-function:ease-in-out;
-       }  
-       
+       }
+
+       .card-face{
+        position:absolute;
+        width:100%;
+        height:100%;
+        overflow:hidden; 
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+       }
+
+       .card-face img{
+        border-radius: 5px;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+       }
+
+       .card-front{
+        transform:rotateY(0deg);
+       }
+
+       .card-back{
+        transform:rotateY(180deg);
+       }
     </style>
 </head>
 <body>
     <div id="container">
-        <div id="card"></div>
+        <div id="card-frame">
+                <div id="main-card">
+                   <div class="card-face card-front">
+                         <img src="./poke.jpg"  alt="front-image">
+                   </div>
+                   <div class="card-face card-back">
+                        <img src="./misti.jpg" alt="back-image">
+                   </div>
+                </div>
+        </div>
     </div>
 </body>
 </html>
