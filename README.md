@@ -6,4 +6,4 @@
 
 5. Pricing cards - Experience how well it looks when prices of a plan are displayed in cards.
 
-6. Summer Collection/Summer Collection - Experience how it looks when products are viewed on cards.
+6. Summer Collection/Summer collection - Experience how it looks when products are viewed on cards.
