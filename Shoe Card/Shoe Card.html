@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe card</title>
+    <style>
+        body{
+            background-color:black;
+        }
+
+       #container{
+        width:100%;
+        height:97vh;
+        background-color:#130D27;
+        border-radius:10px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+       }
+
+       #card-box{
+        width:80%;
+        height:80%;
+        background-color:#130D27;
+        border-radius:10px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:row;
+        gap:120px;
+       }
+
+       .card{
+        width:20%;
+        height:59%;
+        background-color:skyblue;
+        border-radius:10px;
+        border:1px solid black;
+        display:flex;
+        justify-content:center;
+        position:relative;
+        align-items:center;
+        flex-direction:column;
+        transition:transform 1s;
+       }
+
+       .bottom-box{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:99%;
+        height:9%;
+        border-radius:10px;
+        position:absolute;
+        top:90%;
+       }
+       
+       
+       .bottom-box p{
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:bold;
+        font-size:11pt;
+        color:white;
+        border-radius:10px;
+       }
+
+       #bottom1{
+        background-color:slateblue;
+       }
+
+       #bottom2{
+        background-color:orangered;
+       }
+
+       .top-box{
+        width:100%;
+        height:70%;
+        position:absolute;
+        z-index:1;
+        top:15%;
+       }
+
+       #card1{
+        background-color:blue;
+       }
+
+        #card2{
+        background-color:Orange;
+       }
+
+       .top-box p{
+        margin:2%;
+        font-size:30pt;
+        color:white;
+        font-weight:bold;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+       }
+
+       .shoe-box{
+        border-radius:10px;
+        width:120%;
+        height:90%;
+        position:absolute;
+        z-index:2;
+        bottom:30%;
+       }
+
+       #shoe-box1{
+        background-image:url('./shoe1.webp');
+        background-position:center;
+        background-size:contain;
+        background-repeat:no-repeat;
+        left:15%;
+       }
+
+       #shoe-box2{
+        background-image:url('./shoe2.webp');
+        background-position:center;
+        background-size:contain;
+        background-repeat:no-repeat;
+        left:20%;
+       }
+
+       .card:hover{
+        transition-duration:1s;
+        transform: rotateY(30deg) skew(-10deg) ;
+        transform-style:preserve-3d;
+       }
+
+       .price-box{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:40%;
+        height:20%;
+        position:absolute;
+        top:80%;
+        left:70%;
+        z-index:3;
+        border-radius:10px;
+        background-color:skyblue;
+        opacity:0.8;
+        color:white;
+       }
+
+       .price-box p{
+        font-weight:bold;
+        font-size:20pt;
+        font-family:Arial, Helvetica, sans-serif;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="card-box">
+            <div class="card" id="card1">
+             <div class="top-box">
+                  <p>01<br>SNEAKERS</p>
+                  <div class="shoe-box" id="shoe-box1">
+
+                  </div>
+                  <div class="price-box">
+                     <p>$22.93</p>
+                  </div>
+             </div>
+             <div class="bottom-box" id="bottom1"><p>Nike Blue</p></div>
+            </div>
+            <div class="card" id="card2">
+              <div class="top-box">
+                  <p>02<br>SNEAKERS</p>
+                  <div class="shoe-box" id="shoe-box2">
+                    
+                  </div>
+                  <div class="price-box">
+                    <p>$25.90</p>
+                  </div>
+              </div>
+             <div class="bottom-box" id="bottom2"><p>Nike Orange</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

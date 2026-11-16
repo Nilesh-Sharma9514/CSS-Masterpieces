@@ -8,3 +8,4 @@
 
 6. Summer Collection/Summer collection - Experience how it looks when products are viewed on cards.
 7. Registration Form - Experience how a well created registration form looks.
+8. Shoe Card/Shoe Card.html - Experience how a shoe card looks with shoes on top.
